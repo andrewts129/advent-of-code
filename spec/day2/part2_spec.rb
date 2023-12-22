@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 require "spec_helper"
-require "day2_part1"
+require "day2/part2"
 
-describe Day2Part1 do
+describe Day2Part2 do
   describe ".solution" do
     subject(:result) { described_class.solution(input) }
 
@@ -17,15 +17,15 @@ describe Day2Part1 do
       TEXT
 
       it "returns the correct value" do
-        expect(result).to eq(8)
+        expect(result).to eq(2286)
       end
     end
 
     context "on the sample input" do
-      let(:input) { File.readlines("spec/input/day2.txt") }
+      let(:input) { File.readlines("spec/day2/input.txt") }
 
       it "returns the correct value" do
-        expect(result).to eq(2879)
+        expect(result).to eq(65122)
       end
     end
   end

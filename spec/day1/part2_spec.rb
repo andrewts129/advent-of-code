@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require "spec_helper"
-require "day1_part2"
+require "day1/part2"
 
 describe Day1Part2 do
   describe ".calibration_value" do
@@ -24,7 +24,7 @@ describe Day1Part2 do
     end
 
     context "on the sample input" do
-      let(:input) { File.readlines("spec/input/day1.txt") }
+      let(:input) { File.readlines("spec/day1/input.txt") }
 
       it "returns the correct value" do
         expect(result).to eq(54925)
