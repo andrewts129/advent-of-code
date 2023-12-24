@@ -1,0 +1,11 @@
+# frozen_string_literal: true
+
+module Day<%= options[:day] %>Part<%= options[:part] %>
+  def self.solution(lines)
+    # TODO
+  end
+
+  private
+
+  # TODO
+end
