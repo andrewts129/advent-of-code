@@ -1,27 +1,29 @@
 # frozen_string_literal: true
 
 require "spec_helper"
-require "<%= options[:year] %>/day<%= options[:day] %>/part<%= options[:part] %>"
+require "2023/day9/part1"
 
-describe Day<%= options[:day] %>Part<%= options[:part] %> do
+describe Day9Part1 do
   describe ".solution" do
     subject(:result) { described_class.solution(input) }
 
     context "on the sample input" do
       let(:input) { <<~TEXT.split("\n") }
-        TODO
+        0 3 6 9 12 15
+        1 3 6 10 15 21
+        10 13 16 21 30 45
       TEXT
 
       it "returns the correct value" do
-        expect(result).to eq(-1)
+        expect(result).to eq(114)
       end
     end
 
     context "on the real input" do
-      let(:input) { File.readlines("spec/<%= options[:year] %>/day<%= options[:day] %>/input.txt") }
+      let(:input) { File.readlines("spec/2023/day9/input.txt") }
 
       it "returns the correct value" do
-        expect(result).to eq(-1)
+        expect(result).to eq(1762065988)
       end
     end
   end
